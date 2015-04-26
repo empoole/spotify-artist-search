@@ -6,47 +6,24 @@
 	<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/normalize.min.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
 </head>
 <body>
 	<header class="masthead">
 		<img class="masthead-logo" src="img/spotify-logo-min.png">
 		<p>Search for an artist below to see their top three most popular tracks on Spotify.</p>
+		<p>Click the play button for a preview, or the track title to listen on Spotify.</p>
 	</header>
 	<div class="content-wrapper">
 		<section class="search">
 			<form>
-				<input type="text" class="input-search" placeholder="Artist Name">
-				<button type="submit" class="btn-search">Search</button>
+				<input type="text" class="input-search" id="search-query" placeholder="Artist Name">
+				<button type="submit" class="btn-search" id="btn-search">Search</button>
 			</form>
 		</section>
-		<section class="results" id="results">
-			<div class="track">
-				<button class="btn-play"></button>
-				<div class="track-info">
-					<p>Track Title - </p>
-					<p>Artist Name</p>
-					<p class="track-album-title">Album Title</p>
-					<img class="track-album-art" src="">
-				</div>
-			</div>
-			<div class="track">
-				<button class="btn-play"></button>
-				<div class="track-info">
-					<p>Track Title - </p>
-					<p>Artist Name</p>
-					<p class="track-album-title">Album Title</p>
-					<img class="track-album-art" src="">
-				</div>
-			</div>
-			<div class="track">
-				<button class="btn-play"></button>
-				<div class="track-info">
-					<p>Track Title - </p>
-					<p>Artist Name</p>
-					<p class="track-album-title">Album Title</p>
-					<img class="track-album-art" src="">
-				</div>
-			</div>
+		<section class="results hidden" id="results">
+			
 		</section>
 	</div>
 	<footer class="footer-content">
