@@ -107,11 +107,17 @@ html {
 	background-color: #A6CF88;
 }
 
-.btn-play::before {
+.play::before {
 	content: '\25B6';
 	font-size: 1.85rem;
 	line-height: 1rem;
 	padding-left: 2px;
+}
+
+.pause::before {
+	content: '\2016';
+	font-size: 1.85rem;
+	line-height: 1.2rem;
 }
 
 .track-info {

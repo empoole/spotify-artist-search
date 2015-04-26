@@ -47,7 +47,7 @@ $(document).ready(function() {
 	function showResults(results) {
 		for (var i = 0; i <= 2; i++) {	
 			$('#results').append('<div class="track">' +
-				'<button class="btn-play" data-preview="' + results.tracks[i].preview_url + '"></button>' +
+				'<button class="btn-play play" data-preview="' + results.tracks[i].preview_url + '"></button>' +
 				'<div class="track-info">' +
 					'<a href="' + results.tracks[i].external_urls.spotify + '" target="_blank" class="spotify-link">' +
 						'<p>' + results.tracks[i].name + ' - </p>' +
@@ -65,9 +65,17 @@ $(document).ready(function() {
 
 		$('.btn-play').click(function(event) {
 			event.preventDefault();
-			audioObject = new Audio($(this).attr('data-preview'));
 
-			audioObject.play();
+			if ($(this).hasClass('pause')){
+				audioObject.pause();
+				$(this).removeClass('pause');
+				$(this).addClass('play');
+			} else if ($(this).hasClass('play')) {
+				audioObject = new Audio($(this).attr('data-preview'));
+				audioObject.play();
+				$(this).removeClass('play');
+				$(this).addClass('pause');
+			}
 		});
 	}
 
