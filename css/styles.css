@@ -61,7 +61,57 @@ html {
 
 .btn-search:hover {
 	background-color: #A6CF88;
-	border-color: #A6CF88;
+}
+
+.results {
+	border: 1px dashed #9A9B9F;
+	width: 60%;
+	margin: auto;
+	margin-top: 2rem;
+	padding: 15px;
+}
+
+.track {
+	margin-left: 2rem;
+	padding: 15px 0px;
+	border-bottom: 1px solid #9A9B9F;
+}
+
+.btn-play {
+	background-color: #7CC646;
+	color: #FFFFFF;
+
+	border: 1px solid #7CC646;
+	border-radius: 50%;
+
+	height: 40px;
+	width: 40px;
+
+	margin-right: 25px;
+}
+
+.btn-play:hover {
+	background-color: #A6CF88;
+}
+
+.btn-play::before {
+	content: '\25B6';
+	font-size: 1.85rem;
+	line-height: 1rem;
+	padding-left: 2px;
+}
+
+.track-info {
+	display: inline-block;
+}
+
+.track p {
+	display: inline-block;
+	margin: 0;
+}
+
+p.track-album-title {
+	display: block;
 }
 
 .footer-content {
