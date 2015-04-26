@@ -1,0 +1,79 @@
+/*
+	Spotify-green: #7CC646;
+	Spotify-black: #2B2E34;
+	Spotify-gray: #9A9B9F;
+	Spotify-sand: #EEEFED;
+	Spotify-white: #FFFFFF;
+
+	dark-green: #54862F;
+	darker-green: #2C4619;
+	light-green: #A6CF88;
+*/
+
+
+html {
+	color: #2B2E34;
+	font-family: 'Lato', Helvetica, sans-serif;
+}
+
+.content-wrapper {
+	width: 85%;
+	margin: auto;
+}
+
+.search,
+.footer-content,
+.masthead {
+	text-align: center;
+}
+
+.masthead-logo {
+	max-width: 600px;
+}
+
+.input-search {
+	padding: 5px;
+
+	border-radius: 5px;
+	border: 1px solid #9A9B9F;
+	
+	font-size: 1.5rem;
+
+	width: 40%;
+	min-width: 400px;
+}
+
+.btn-search {
+	font-weight: bold;
+	font-size: 1.5rem;
+	color: #FFFFFF;
+	
+	background-color: #7CC646;
+
+	border: none;
+	border-radius: 5px;
+	border: 1px solid #7CC646;
+
+	padding: 5px 15px;
+
+	cursor: pointer;
+}
+
+.btn-search:hover {
+	background-color: #A6CF88;
+	border-color: #A6CF88;
+}
+
+.footer-content {
+	background-color: #2B2E34;
+	padding-top: 5rem;
+	padding-bottom: 1rem;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.copyright {
+	font-size: .75rem;
+	color: #FFFFFF;
+}
