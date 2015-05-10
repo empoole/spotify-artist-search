@@ -2,6 +2,8 @@ $(document).ready(function() {
 	var audioObject = null;
 
 	function getArtistId(query) {
+		var id = "";
+
 		var request = {
 			query: query,
 			type: 'artist'
@@ -13,12 +15,16 @@ $(document).ready(function() {
 			dataType: 'json',
 			type: 'GET',
 		}).done(function(result) {
-			var id = result.artists.items[0].id;
-			getTopTracks(id); //****************
-			return id;
+			if(result.artists.items.length === 0) {
+				showError("No results found for " + query);
+			} else {
+				id = result.artists.items[0].id;
+				getTopTracks(id); //****************
+			}
 		}).fail(function() {
 			alert("Error getting artist.");
 		});
+		return id;
 	}
 
 	function getTopTracks(artistId) {
@@ -42,6 +48,12 @@ $(document).ready(function() {
 	function clearResults() {
 		$('#results').html("");
 		$('#results').addClass('hidden');
+	}
+
+	function showError(errorText) {
+		clearResults();
+		$('#results').removeClass('hidden');
+		$('#results').append('<h2>' + errorText + '</h2>');
 	}
 
 	function showResults(results) {
@@ -85,7 +97,12 @@ $(document).ready(function() {
 		clearResults();
 
 		var searchQuery = $('#search-query').val();
-		getArtistId(searchQuery);
+		var id = getArtistId(searchQuery);
+		//getTopTracks(id);
 		//*************
+	});
+
+	$('#search-query').click(function(event) {
+		$(this).val("");
 	});
 });

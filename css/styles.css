@@ -103,6 +103,10 @@ html {
 	margin-right: 25px;
 }
 
+.btn-play:focus {
+	outline: 0;
+}
+
 .btn-play:hover {
 	background-color: #A6CF88;
 }
@@ -117,7 +121,8 @@ html {
 .pause::before {
 	content: '\2016';
 	font-size: 1.85rem;
-	line-height: 1.2rem;
+	line-height: 1rem;
+	margin-top: 5px;
 }
 
 .track-info {
@@ -141,8 +146,8 @@ p.track-album-title {
 
 .footer-content {
 	background-color: #2B2E34;
-	padding-top: 3.5rem;
-	padding-bottom: 1rem;
+	padding-top: 1rem;
+	padding-bottom: .5rem;
 	position: absolute;
 	bottom: 0;
 	width: 100%;
