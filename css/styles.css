@@ -11,6 +11,16 @@
 */
 
 
+
+@font-face {
+
+  font-family: 'icomoon';
+  src: url("../icons/icomoon.eot");
+  src: url("../icons/icomoon.eot#iefix") format("embedded-opentype"), url("../icons/icomoon.woff") format("woff"), url("../icons/icomoon.ttf") format("truetype"), url("../icons/icomoon.svg#icomoon") format("svg"); 
+
+}
+
+
 html {
 	color: #2B2E34;
 	font-family: 'Lato', Helvetica, sans-serif;
@@ -94,6 +104,8 @@ html {
 	background-color: #7CC646;
 	color: #FFFFFF;
 
+	font-family: 'icomoon';
+
 	border: 1px solid #7CC646;
 	border-radius: 50%;
 
@@ -108,15 +120,15 @@ html {
 }
 
 .play::before {
-	content: '\25B6';
-	font-size: 1.85rem;
+	content: '\ea1c';
+	font-size: 1rem;
 	line-height: 1rem;
 	padding-left: 2px;
 }
 
 .pause::before {
-	content: '\2016';
-	font-size: 1.85rem;
+	content: '\ea1d';
+	font-size: 1rem;
 	line-height: 1.2rem;
 }
 
@@ -141,8 +153,8 @@ p.track-album-title {
 
 .footer-content {
 	background-color: #2B2E34;
-	padding-top: 3.5rem;
-	padding-bottom: 1rem;
+	padding-top: 1rem;
+	padding-bottom: .5rem;
 	position: absolute;
 	bottom: 0;
 	width: 100%;
